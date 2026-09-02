@@ -1,0 +1,63 @@
+.placeholder-body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2em;
+}
+
+.placeholder-shell {
+	width: min(42rem, 100%);
+	background: var(--surface);
+	border: solid 1px var(--border);
+	border-radius: 20px;
+	box-shadow: inset 0px 0px 0px 1px var(--border-soft), 0 24px 48px rgba(0, 0, 0, 0.22);
+	padding: 3em;
+}
+
+.placeholder-kicker {
+	margin: 0 0 1.2em 0;
+	text-transform: uppercase;
+	letter-spacing: 0.35em;
+	font-size: 0.8em;
+	color: var(--body-muted);
+}
+
+.placeholder-shell h1 {
+	margin-bottom: 0.5em;
+}
+
+.placeholder-shell p {
+	color: var(--body-text);
+}
+
+.placeholder-actions {
+	list-style: none;
+	padding: 0;
+	margin: 2em 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.placeholder-actions li {
+	padding: 0;
+}
+
+.placeholder-actions .button {
+	border: solid 1px var(--title);
+	border-radius: 0;
+}
+
+@media screen and (max-width: 736px) {
+
+	.placeholder-shell {
+		padding: 2em 1.5em;
+		border-radius: 16px;
+	}
+
+	.placeholder-actions {
+		flex-direction: column;
+	}
+
+}

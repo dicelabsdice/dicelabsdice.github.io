@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="es" data-theme="dark">
+	<head>
+		<title>Gore Chess | DICE LABS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#090c10" />
+		<link rel="icon" type="image/png" href="../images/logo-blanco.png?v=1788345082091" />
+		<link rel="shortcut icon" href="../images/logo-blanco.png?v=1788345082091" />
+		<link rel="stylesheet" href="../assets/css/main.css?v=1788345082091" />
+		<link rel="stylesheet" href="../assets/css/dice-labs-apps-theme.css?v=1788345082091" />
+		<link rel="stylesheet" href="../assets/css/dice-labs-apps-placeholder.css?v=1788345082091" />
+	</head>
+	<body class="placeholder-body">
+		<script>
+			(function() {
+				var language = 'es';
+				try {
+					var theme = window.localStorage.getItem('dice-labs-theme');
+					language = window.localStorage.getItem('dice-labs-language') || language;
+					if (theme === 'dark' || theme === 'light')
+						document.documentElement.setAttribute('data-theme', theme);
+				}
+				catch (error) {}
+
+				var translations = {
+					es: {
+						body: 'Gore Chess todavia se encuentra en desarrollo. Estamos trabajando en la experiencia de juego, la direccion creativa, sus versiones de distribucion, la landing y el aviso de privacidad antes de presentarlo publicamente.',
+						catalog: 'Regresar al catalogo',
+						home: 'Ir a dice-labs.com'
+					},
+					en: {
+						body: 'Gore Chess is still in development. We are working on the gameplay experience, creative direction, distribution builds, landing page, and privacy notice before presenting it publicly.',
+						catalog: 'Back to catalog',
+						home: 'Go to dice-labs.com'
+					},
+					fr: {
+						body: 'Gore Chess est toujours en developpement. Nous travaillons sur l experience de jeu, la direction creative, les versions de distribution, la landing page et l avis de confidentialite avant sa presentation publique.',
+						catalog: 'Retour au catalogue',
+						home: 'Aller a dice-labs.com'
+					},
+					de: {
+						body: 'Gore Chess befindet sich noch in Entwicklung. Wir arbeiten an dem Spielerlebnis, der kreativen Ausrichtung, den Vertriebsversionen, der Landingpage und dem Datenschutzhinweis, bevor wir es oeffentlich vorstellen.',
+						catalog: 'Zurueck zum Katalog',
+						home: 'Zu dice-labs.com'
+					},
+					ru: {
+						body: '\u0413\u043e\u0440 \u0428\u0430\u0445\u043c\u0430\u0442\u044b \u0435\u0449\u0435 \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435. \u041c\u044b \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u043c \u043d\u0430\u0434 \u0438\u0433\u0440\u043e\u0432\u044b\u043c \u043e\u043f\u044b\u0442\u043e\u043c, \u0442\u0432\u043e\u0440\u0447\u0435\u0441\u043a\u0438\u043c \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435\u043c, \u0432\u0435\u0440\u0441\u0438\u044f\u043c\u0438 \u0434\u043b\u044f \u0440\u0430\u0441\u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u044f, \u043b\u0435\u043d\u0434\u0438\u043d\u0433\u043e\u043c \u0438 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435\u043c \u043e \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u043f\u0435\u0440\u0435\u0434 \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u044b\u043c \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0435\u043c.',
+						catalog: '\u0412\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f \u043a \u043a\u0430\u0442\u0430\u043b\u043e\u0433\u0443',
+						home: '\u041f\u0435\u0440\u0435\u0439\u0442\u0438 \u043d\u0430 dice-labs.com'
+					}
+				};
+				var copy = translations[language] || translations.es;
+
+				function applyTranslations() {
+					document.documentElement.setAttribute('lang', translations[language] ? language : 'es');
+					document.querySelectorAll('[data-i18n]').forEach(function(element) {
+						element.textContent = copy[element.getAttribute('data-i18n')];
+					});
+				}
+
+				document.addEventListener('DOMContentLoaded', applyTranslations);
+			})();
+		</script>
+		<main class="placeholder-shell">
+			<p class="placeholder-kicker">Keep rolling</p>
+			<h1>Gore Chess</h1>
+			<p data-i18n="body">Gore Chess todavia se encuentra en desarrollo. Estamos trabajando en la experiencia de juego, la direccion creativa, sus versiones de distribucion, la landing y el aviso de privacidad antes de presentarlo publicamente.</p>
+			<ul class="placeholder-actions">
+				<li><a href="../" class="button primary" data-i18n="catalog">Regresar al catalogo</a></li>
+				<li><a href="https://dice-labs.com/" class="button" data-i18n="home">Ir a dice-labs.com</a></li>
+			</ul>
+		</main>
+	</body>
+</html>

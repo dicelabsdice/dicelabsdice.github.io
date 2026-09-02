@@ -4,6 +4,7 @@
   const languageToggle = document.querySelector('.language-toggle');
   const languageOptions = document.querySelector('#language-options');
   const languageButtons = document.querySelectorAll('[data-language]');
+  const languageCurrentFlag = document.querySelector('.language-current-flag');
   const storageKey = 'dice-labs-app-template-language';
 
   const translations = {
@@ -61,6 +62,7 @@
       const key = element.dataset.i18n;
       if (copy[key]) element.textContent = copy[key];
     });
+    if (languageCurrentFlag) languageCurrentFlag.src = `images/flags/${language.toUpperCase()}.webp`;
     languageButtons.forEach((button) => button.classList.toggle('is-active', button.dataset.language === language));
     localStorage.setItem(storageKey, language);
   };
