@@ -1,31 +1,108 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!-- App landing template built from Dimension and Hyperspace by HTML5 UP. -->
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Play the Sliding Tiles Puzzle web demo by Dice Labs.">
-  <title>Sliding Tiles Puzzle · Dice Labs</title>
-  <style>
-    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #07110f; color: #fbfbf7; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at 80% 12%, #129c90 0, transparent 32%), radial-gradient(circle at 16% 80%, #7461b9 0, transparent 30%), #07110f; }
-    main { width: min(92vw, 760px); padding: 48px 24px; text-align: center; }
-    .brand { color: #9fe8d8; letter-spacing: .12em; text-transform: uppercase; font-weight: 750; font-size: .8rem; }
-    h1 { font-size: clamp(2.6rem, 9vw, 5.8rem); line-height: .95; margin: .7rem 0 1.3rem; }
-    p { color: #d0ddd9; line-height: 1.6; max-width: 570px; margin: 0 auto; }
-    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 2rem; }
-    a { padding: 13px 22px; border: 1px solid #87dac9; border-radius: 999px; color: #07110f; background: #9fe8d8; text-decoration: none; font-weight: 750; }
-    a.secondary { background: rgba(0,0,0,.24); color: #e7f3ef; border-color: #5b8f84; }
-  </style>
+  <title>DICE LABS | Sliding Tiles Puzzle</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/dice-app-template.css?v=1788334827592" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
-  <main>
-    <div class="brand">Dice Labs presents</div>
-    <h1>Sliding Tiles<br>Puzzle</h1>
-    <p>Rearrange each image, experiment with board modifiers and find your own route back to the solved board.</p>
-    <div class="actions">
-      <a href="demo/">Play the web demo</a>
-      <a class="secondary" href="privacy/">Privacy</a>
+<body class="is-preload">
+  <div id="wrapper">
+    <header id="header">
+      <div class="logo dice-logo" aria-label="DICE LABS">
+        <span class="dice dice-left" aria-hidden="true"></span>
+        <span class="dice dice-right" aria-hidden="true"></span>
+      </div>
+      <div class="content"><div class="inner">
+        <h1 data-i18n="appName">Sliding Tiles Puzzle</h1>
+          <p data-i18n="tagline">La versión moderna del clásico 15-puzzle: desliza piezas para reconstruir imágenes y resuelve tableros con reglas, rutas y desafíos distintos.</p>
+      </div></div>
+      <nav aria-label="Navegación de la aplicación">
+        <ul>
+          <li><a href="#information" data-i18n="moreInfo">Conoce el juego</a></li>
+          <li class="language-control">
+            <button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" data-i18n="language">Idioma</button>
+            <div id="language-options" class="language-options" hidden>
+              <button type="button" data-language="es"><img src="images/flags/ES.webp" alt="" />Español</button>
+              <button type="button" data-language="en"><img src="images/flags/EN.webp" alt="" />English</button>
+              <button type="button" data-language="fr"><img src="images/flags/FR.webp" alt="" />Français</button>
+              <button type="button" data-language="de"><img src="images/flags/DE.webp" alt="" />Deutsch</button>
+              <button type="button" data-language="ru"><img src="images/flags/RU.webp" alt="" />Русский</button>
+            </div>
+          </li>
+          <li><a class="platform-link" href="#"><span class="platform-icons"><i class="icon brands fa-google-play" aria-hidden="true"></i><i class="icon brands fa-android" aria-hidden="true"></i></span><span data-i18n="download">Próximamente</span></a></li>
+          <li><a class="platform-link" href="#"><span class="platform-icons"><img class="microsoft-store-icon" src="images/microsoft-store.png" alt="" /><i class="icon brands fa-windows" aria-hidden="true"></i></span><span data-i18n="download">Próximamente</span></a></li>
+          <li><a class="demo-link" href="https://dice-labs.com/apps/sliding-tiles/demo/"><i class="icon solid fa-play" aria-hidden="true"></i><span data-i18n="demo">Jugar demo</span></a></li>
+          <li><a href="https://dice-labs.com/apps/sliding-tiles/privacy/" data-i18n="privacy">Aviso de privacidad</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <article id="information" class="app-information">
+        <div class="app-spotlights">
+          <section>
+            <img src="images/about-catalog.png" alt="Catálogo de niveles de Sliding Tiles Puzzle" />
+            <div class="spotlight-copy">
+              <h2 data-i18n="detailOneTitle">Un catálogo de retos</h2>
+              <p data-i18n="detailOneText">Explora map packs temáticos. Cada card muestra dimensiones, modificadores y dificultad estimada.</p>
+            </div>
+          </section>
+          <section>
+            <img src="images/about-normal-play.png" alt="Nivel estándar de Sliding Tiles Puzzle" />
+            <div class="spotlight-copy">
+              <h2 data-i18n="detailTwoTitle">El clásico, ampliado</h2>
+              <p data-i18n="detailTwoText">Desliza las piezas para reconstruir la imagen en tableros de distintos tamaños.</p>
+            </div>
+          </section>
+          <section>
+            <img src="images/about-mechanics-board.png" alt="Nivel con mecánicas especiales en Sliding Tiles Puzzle" />
+            <div class="spotlight-copy">
+              <h2 data-i18n="detailThreeTitle">Tableros con reglas propias</h2>
+              <p data-i18n="detailThreeText">Túneles, celdas fijas, piezas recortadas, rotación y aristas bloqueadas cambian cada solución.</p>
+            </div>
+          </section>
+          <section>
+            <img src="images/about-mechanics-numbers.png" alt="Nivel con numeración de casillas en Sliding Tiles Puzzle" />
+            <div class="spotlight-copy">
+              <h2 data-i18n="detailFourTitle">Ayuda visual cuando la necesites</h2>
+              <p data-i18n="detailFourText">Activa la numeración de casillas y consulta la guía resuelta debajo del tablero.</p>
+            </div>
+          </section>
+          <section>
+            <img src="images/about-generated.png" alt="Función de niveles generados de Sliding Tiles Puzzle" />
+            <div class="spotlight-copy">
+              <h2 data-i18n="detailFiveTitle">Niveles generados</h2>
+              <p data-i18n="detailFiveText">Premium permite crear retos aleatorios con imágenes del juego y parámetros elegidos por ti.</p>
+            </div>
+          </section>
+          <section>
+            <img src="images/about-personalized.png" alt="Función de niveles personalizados de Sliding Tiles Puzzle" />
+            <div class="spotlight-copy">
+              <h2 data-i18n="detailSixTitle">Niveles personalizados</h2>
+              <p data-i18n="detailSixText">Premium permite usar tus propias imágenes, definir el tablero y guardar tus creaciones.</p>
+            </div>
+          </section>
+          <section class="contact-spotlight">
+            <div class="spotlight-copy">
+              <h2 data-i18n="contact">Contacto</h2>
+              <p><strong data-i18n="mainEmail">Correo principal</strong><br /><a href="mailto:dicelabs@outlook.com">dicelabs@outlook.com</a></p>
+              <p><strong data-i18n="technicalEmail">Correo técnico</strong><br /><a href="mailto:dicelabs.dice@gmail.com">dicelabs.dice@gmail.com</a></p>
+            </div>
+          </section>
+        </div>
+      </article>
     </div>
-  </main>
+    <footer id="footer"><p class="copyright">&copy; DICE LABS.</p></footer>
+  </div>
+  <div id="bg"></div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dice-app-template.js"></script>
 </body>
 </html>
