@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apps by Dice Labs.">
+  <title>Apps · Dice Labs</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #090d14; color: #f7f8fb; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at 20% 15%, #185850 0, transparent 34%), #090d14; }
+    main { width: min(92vw, 720px); padding: 48px 24px; }
+    .eyebrow { color: #7ce4cc; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; font-size: .8rem; }
+    h1 { margin: .25rem 0 2rem; font-size: clamp(2.4rem, 7vw, 4.8rem); }
+    .app { display: block; padding: 28px; border: 1px solid #2b3b4a; border-radius: 24px; color: inherit; text-decoration: none; background: rgba(255,255,255,.04); transition: transform .18s ease, border-color .18s ease; }
+    .app:hover { transform: translateY(-3px); border-color: #7ce4cc; }
+    .app h2 { margin: 0 0 .5rem; font-size: 1.5rem; }
+    .app p { margin: 0; color: #b9c2cf; line-height: 1.55; }
+    .arrow { color: #7ce4cc; display: inline-block; margin-top: 1rem; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Dice Labs</div>
+    <h1>Apps</h1>
+    <a class="app" href="sliding-tiles/">
+      <h2>Sliding Tiles Puzzle</h2>
+      <p>A puzzle game with handcrafted boards, modifiers and multiple ways to play.</p>
+      <span class="arrow">Explore →</span>
+    </a>
+  </main>
+</body>
+</html>
