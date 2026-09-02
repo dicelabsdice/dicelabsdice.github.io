@@ -1,0 +1,156 @@
+/* DICE LABS privacy notice additions. */
+body { background: #000; }
+#wrapper { margin-left: 0 !important; }
+
+#privacy,
+#footer { background: #000 !important; }
+
+.policy-toolbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  align-items: stretch;
+  gap: 0.7rem;
+  width: 100%;
+  margin: 2.5rem auto 3.5rem;
+}
+
+.policy-detail,
+.language-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 2.85rem;
+  padding: 0.4rem 0.85rem;
+  border: solid 1px rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+}
+
+.policy-detail { min-width: 0; flex-direction: row; align-items: center; justify-content: flex-start; gap: 0.45rem; white-space: normal; }
+.policy-detail strong { margin: 0; color: #fff; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; }
+.updated-detail { min-width: 0; white-space: normal; }
+.updated-detail > span { min-width: 0; overflow-wrap: anywhere; }
+.scope-label { display: none; }
+
+.language-control { min-width: 0; padding: 0; }
+.language-control summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0.4rem 0.85rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.68rem;
+  font-weight: bold;
+  letter-spacing: 0.16em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.language-control summary::-webkit-details-marker { display: none; }
+.language-control summary::after { content: '+'; margin-left: 0.25rem; font-size: 1rem; font-weight: normal; }
+.language-control[open] summary::after { content: '−'; }
+
+.language-options {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 0.45rem);
+  left: -1px;
+  box-sizing: border-box;
+  width: 140%;
+  min-width: 0;
+  padding: 0.2rem;
+  border: solid 1px rgba(255, 255, 255, 0.35);
+  background: #090909;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.45);
+}
+
+.language-options button {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.82);
+  font: inherit;
+  font-size: 0.75rem;
+  height: calc(1.8rem + 4px) !important;
+  line-height: normal !important;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-options button::after { display: none !important; }
+.language-options button:hover { background: rgba(255, 255, 255, 0.1) !important; color: #fff; }
+.language-options button.is-active { background: rgba(255, 255, 255, 0.14) !important; color: #fff; }
+.language-options img { width: 1.25rem; height: 0.9rem; object-fit: cover; border-radius: 1px; }
+
+#privacy .inner {
+  width: min(calc(100% - 4rem), 68rem);
+  max-width: 68rem;
+  margin: 0 auto !important;
+}
+#privacy .section-intro { max-width: 52rem; }
+
+/* Preserve Hyperspace's feature language, but always stack its sections. */
+#privacy .privacy-features {
+  display: block;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+#privacy .privacy-features section {
+  width: 100%;
+  padding: 3rem 3rem 2.5rem 7rem;
+  border-top: solid 1px rgba(255, 255, 255, 0.2) !important;
+  border-left: 0 !important;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+#privacy .privacy-features section:first-child { border-top: 0 !important; }
+#privacy .privacy-features section .icon { left: 2.5rem; top: 2.65rem; }
+#privacy .privacy-features section .icon.major:before { background: #fff; color: #000; box-shadow: none; }
+#privacy .privacy-features .privacy-contact { background: #000; }
+
+.dice-signature {
+  display: block;
+  width: 3.24rem;
+  height: auto;
+  margin: 0;
+  opacity: 0.88;
+}
+
+.dice-signature-wrap {
+  display: flex;
+  justify-content: center;
+  width: calc(100% + 10rem);
+  margin: 3.5rem 0 0 -7rem;
+}
+
+#footer > .inner { margin: 0 auto !important; text-align: center; }
+#footer .menu { justify-content: center; }
+
+@media screen and (max-width: 736px) {
+  #privacy .privacy-features section { padding: 2.5rem 2rem 2rem 5.5rem; }
+  #privacy .privacy-features section .icon { left: 1.5rem; top: 2rem; }
+  .dice-signature-wrap { width: calc(100% + 7.5rem); margin-left: -5.5rem; }
+}
+
+@media screen and (max-width: 480px) {
+  #privacy .inner {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem 0.85rem 1rem !important;
+  }
+  .policy-toolbar { grid-template-columns: 1fr; gap: 0.55rem; }
+  #privacy .privacy-features section { padding: 1.75rem 1rem; }
+  #privacy .privacy-features section .icon { position: relative; left: 0; top: 0; margin-bottom: 1rem; }
+  .dice-signature-wrap { width: 100%; margin-left: 0; }
+}
