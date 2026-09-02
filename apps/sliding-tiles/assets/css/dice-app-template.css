@@ -54,7 +54,10 @@
 
 #header > * { margin-top: calc(3.5rem - 2px); }
 #header > :first-child { margin-top: 0; }
-#header .content { margin-top: calc(3.5rem - 7px); }
+#header .content {
+  width: min(80%, 57.6rem);
+  margin-top: calc(3.5rem - 7px);
+}
 #header .content .inner { padding: calc(3rem - 2px) calc(2rem - 2px); }
 
 #header nav { position: relative; width: min(calc(100vw - 4rem), 72rem); }
@@ -184,15 +187,15 @@
 
 html,
 body {
-  background: #11161a url("../../images/bg.jpg?v=1788345082206") center / cover fixed no-repeat !important;
+  background: #11161a url("../../images/bg.jpg?v=1788345634133") center / cover fixed no-repeat !important;
 }
 
 #wrapper {
-  background: linear-gradient(rgba(19, 21, 25, 0.2), rgba(19, 21, 25, 0.2)), url("../../images/bg.jpg?v=1788345082206") center / cover fixed no-repeat;
+  background: linear-gradient(rgba(19, 21, 25, 0.2), rgba(19, 21, 25, 0.2)), url("../../images/bg.jpg?v=1788345634133") center / cover fixed no-repeat;
 }
 
 #bg:after {
-  background-image: url("../../images/bg.jpg?v=1788345082206") !important;
+  background-image: url("../../images/bg.jpg?v=1788345634133") !important;
   background-position: center;
 }
 
@@ -256,6 +259,7 @@ body.is-article-visible { overflow: hidden; }
 @media screen and (max-width: 736px) {
   #header > * { margin-top: calc(2rem - 2px); }
   #header > :first-child { margin-top: 0; }
+  #header .content { width: calc(100% - 2rem); }
   #header .content .inner { padding: calc(2.5rem - 2px) calc(1rem - 2px); }
   #header nav { width: min(calc(100vw - 2rem), 72rem); }
   #header .dice-logo { height: 4.75rem; }
