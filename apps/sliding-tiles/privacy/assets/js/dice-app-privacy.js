@@ -2,6 +2,8 @@
   const storageKey = 'sliding-tiles-privacy-language';
   const languageControl = document.querySelector('.language-control');
   const languageButtons = document.querySelectorAll('[data-language]');
+  const selectedLanguageFlag = document.querySelector('.language-current-flag');
+  const languageFlags = { es: 'ES.webp', en: 'EN.webp', fr: 'FR.webp', de: 'DE.webp', ru: 'RU.webp' };
 
   const translations = {
     es: {
@@ -64,6 +66,7 @@
   const setLanguage = (language) => {
     const copy = translations[language] || translations.es;
     document.documentElement.lang = language;
+    if (selectedLanguageFlag) selectedLanguageFlag.src = `images/flags/${languageFlags[language] || languageFlags.es}`;
     document.querySelectorAll('[data-i18n]').forEach((element) => {
       const key = element.dataset.i18n;
       if (copy[key]) element.textContent = copy[key];
