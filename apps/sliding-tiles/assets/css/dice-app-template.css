@@ -52,6 +52,8 @@
 
 #header { width: 100%; }
 
+/* Keep the app identity block narrower than the full-width action row. */
+#header .content { width: min(80%, 57.6rem); }
 #header > * { margin-top: calc(3.5rem - 2px); }
 #header > :first-child { margin-top: 0; }
 #header .content { margin-top: calc(3.5rem - 7px); }
@@ -244,6 +246,7 @@ body.is-article-visible { overflow: hidden; }
 .contact-spotlight .spotlight-copy { max-width: 38rem; padding: calc(3.5rem - 2px); }
 
 @media screen and (max-width: 736px) {
+  #header .content { width: calc(100% - 2rem); }
   #header > * { margin-top: calc(2rem - 2px); }
   #header > :first-child { margin-top: 0; }
   #header .content .inner { padding: calc(2.5rem - 2px) calc(1rem - 2px); }
