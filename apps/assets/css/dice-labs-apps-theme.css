@@ -770,3 +770,15 @@ body:not(.is-touch) .tiles article.app-card.has-preview:hover > a {
 	}
 
 }
+
+/* Prevent the two-column layout from squeezing app titles at intermediate widths. */
+@media screen and (max-width: 600px) {
+	.tiles {
+		margin: 0;
+	}
+
+	.tiles article {
+		width: 100%;
+		margin: 1.25em 0 0 0;
+	}
+}

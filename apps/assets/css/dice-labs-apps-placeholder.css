@@ -60,4 +60,17 @@
 		flex-direction: column;
 	}
 
+	.placeholder-actions li,
+	.placeholder-actions .button {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.placeholder-actions .button {
+		display: block;
+		padding-left: 1em;
+		padding-right: 1em;
+		text-align: center;
+	}
+
 }
