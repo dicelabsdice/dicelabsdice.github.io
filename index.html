@@ -1,30 +1,232 @@
-<!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dice Labs — Coming Soon</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,sans-serif;background:#0b1020;color:#fff;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;
-background:
-radial-gradient(circle at 20% 20%,rgba(0,255,170,.18),transparent 35%),
-radial-gradient(circle at 80% 70%,rgba(70,120,255,.18),transparent 35%),#0b1020}
-body:before{content:"";position:fixed;inset:-50%;background:
-linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.03) 50%,transparent 50.2%),
-linear-gradient(transparent 49.8%,rgba(255,255,255,.03) 50%,transparent 50.2%);
-background-size:42px 42px;transform:rotate(8deg);animation:d 35s linear infinite}
-@keyframes d{to{transform:rotate(8deg) translate(-42px,-42px)}}
-.card{position:relative;z-index:2;width:min(92vw,720px);padding:64px 40px;text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:28px;backdrop-filter:blur(18px)}
-.logo{font-size:4.5rem}
-h1{font-size:clamp(2.6rem,7vw,5rem);letter-spacing:-.05em;margin:.2em 0}
-p{color:rgba(255,255,255,.72);line-height:1.7;max-width:540px;margin:auto}
-.tag{display:inline-block;margin-top:30px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#9df5d3;font-weight:700}
-small{display:block;margin-top:26px;color:rgba(255,255,255,.45)}
-</style></head>
-<body>
-<div class="card">
-<div class="logo">🎲</div>
-<h1>Dice Labs</h1>
-<p>Thanks For Watching.<br>;)</p>
-<div class="tag">COMING SOON...</div>
-<small>© Dice Labs</small>
-</div>
-</body></html>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es" data-theme="dark">
+	<head>
+		<title>DICE LABS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#090c10" />
+		<link rel="icon" type="image/png" href="images/logo-blanco.png?v=20260902" />
+		<link rel="shortcut icon" href="images/logo-blanco.png?v=20260902" />
+		<link rel="stylesheet" href="assets/css/main.css?v=20260829" />
+		<link rel="stylesheet" href="assets/css/dice-labs-theme.css?v=20260903c" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="index.html">DICE LABS</a></h1>
+							<p>Keep rolling</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="#intro" data-i18n="nav.home">Inicio</a></li>
+								<li><a href="#main" data-i18n="nav.whatsNext">Vision</a></li>
+								<li><a href="#highlights" data-i18n="nav.keyRoutes">Contenido</a></li>
+								<li><a href="#footer" data-i18n="nav.contact">Contacto</a></li>
+								<li>
+									<a href="#"><span data-i18n="nav.language">Idioma</span></a>
+									<ul>
+										<li><a href="?lang=es" class="nav-option language-option" data-language="es"><img src="images/flags/ES.webp" class="nav-flag" alt="" />Espa&ntilde;ol</a></li>
+										<li><a href="?lang=en" class="nav-option language-option" data-language="en"><img src="images/flags/EN.webp" class="nav-flag" alt="" />English</a></li>
+										<li><a href="?lang=fr" class="nav-option language-option" data-language="fr"><img src="images/flags/FR.webp" class="nav-flag" alt="" />Fran&ccedil;ais</a></li>
+										<li><a href="?lang=de" class="nav-option language-option" data-language="de"><img src="images/flags/DE.webp" class="nav-flag" alt="" />Deutsch</a></li>
+										<li><a href="?lang=ru" class="nav-option language-option" data-language="ru"><img src="images/flags/RU.webp" class="nav-flag" alt="" />Russkiy</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><span data-i18n="nav.theme">Tema</span></a>
+									<ul>
+										<li><a href="?theme=dark" class="nav-option" data-set-theme="dark" data-i18n="theme.dark">Oscuro</a></li>
+										<li><a href="?theme=light" class="nav-option" data-set-theme="light" data-i18n="theme.light">Claro</a></li>
+										<li><a href="?theme=gray" class="nav-option" data-set-theme="gray" data-i18n="theme.gray">Gris</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Intro -->
+				<section id="intro" class="wrapper style1">
+					<div class="title" data-i18n="intro.title">Bienvenido</div>
+					<div class="container">
+						<p class="style1" data-i18n="intro.lead">Laboratorio digital independiente para apps, sitios y herramientas creativas.</p>
+						<p class="style2" data-i18n="intro.headline">
+							DICE LABS construye<br class="mobile-hide" />
+							apps, landings y experimentos digitales
+						</p>
+						<p class="style3" data-i18n="intro.body">
+							Este dominio sera el punto de encuentro para piezas digitales que pueden crecer y evolucionar de forma independiente:
+							aplicaciones para <strong>Android</strong>, aplicaciones para <strong>Windows</strong>, aplicaciones <strong>web</strong>, landing pages,
+							publicaciones, experimentos y documentaciones. Sus canales de distribucion y acceso viviran dentro de <strong>dice-labs.com</strong>.
+							La demo de la primera pieza ya esta en linea y el resto tambien ira creciendo desde aqui.
+						</p>
+						<ul class="actions">
+							<li><a href="https://dice-labs.com/apps/sliding-tiles/demo/" class="button style3 large" data-i18n="intro.primary">Ver demo 1&deg; juego</a></li>
+							<li><a href="#main" class="button style2 large" data-i18n="intro.secondary">Explorar vision</a></li>
+						</ul>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title" data-i18n="main.title">Vision</div>
+					<div class="container">
+
+						<!-- Image -->
+							<a href="#" class="image featured">
+							<img src="images/que-sigue.png" alt="Próximos proyectos de DICE LABS" />
+							</a>
+
+						<!-- Features -->
+							<section id="features">
+								<header class="style1">
+									<h2 data-i18n="features.heading">Un dominio, multiples frentes de trabajo</h2>
+									<p data-i18n="features.subheading">La idea es publicar piezas distintas sin mezclar sus bases.</p>
+								</header>
+								<div class="feature-list">
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-sync" data-i18n="features.apps.title">Apps y catalogo central</h3>
+												<p data-i18n="features.apps.body">Este sitio enlazara a un escaparate de apps con descargas, avisos de privacidad y paginas por producto.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-cog" data-i18n="features.landings.title">Landings por producto</h3>
+												<p data-i18n="features.landings.body">Cada app o iniciativa tendra su propia pagina con personalidad, funcionamiento, distribucion y contexto propios.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-wrench" data-i18n="features.publish.title">Publicacion simple</h3>
+												<p data-i18n="features.publish.body">La meta es publicar demos, paginas y recursos de forma directa y facil de entender.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-check" data-i18n="features.lab.title">Laboratorio experimental</h3>
+												<p data-i18n="features.lab.body">DICE LABS tambien puede alojar pruebas de UI, automatizacion, ideas visuales y herramientas que todavia estan madurando.</p>
+											</section>
+										</div>
+									</div>
+								</div>
+								<ul class="actions special">
+									<li><a href="https://dice-labs.com/apps/" class="button style1 large" data-i18n="features.cta.apps">Ir a apps</a></li>
+									<li><a href="#footer" class="button style2 large" data-i18n="features.cta.contact">Ir a contacto</a></li>
+								</ul>
+							</section>
+
+					</div>
+				</section>
+
+			<!-- Highlights -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title" data-i18n="routes.title">Contenido</div>
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="documents/karosserdata-project-overview.pdf" class="image featured" data-pdf-viewer-open><img src="images/kd.jpeg" alt="Karosserdata" /></a>
+									<h3><a href="documents/karosserdata-project-overview.pdf" data-pdf-viewer-open>Karosserdata</a></h3>
+									<p data-i18n="routes.kd.body">Uno de nuestros desarrollos mas recientes para el sector automotriz, planteado como una solucion tecnica de caracter confidencial.</p>
+									<ul class="actions">
+										<li><a href="documents/karosserdata-project-overview.pdf" class="button style1" data-pdf-viewer-open data-i18n="routes.kd.button">Ver referencia</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://dice-labs.com/apps/" class="image featured"><img src="images/apps.png" alt="Catálogo de apps de DICE LABS" /></a>
+									<h3><a href="https://dice-labs.com/apps/">Apps</a></h3>
+									<p data-i18n="routes.apps.body">Catalogo de aplicaciones publicadas por DICE LABS, con paginas y documentacion por cada producto.</p>
+									<ul class="actions">
+										<li><a href="https://dice-labs.com/apps/" class="button style1" data-i18n="routes.apps.button">Ver plan</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://dice-labs.com/apps/sliding-tiles/" class="image featured"><img src="images/sliding-tiles.png" alt="Sliding Tiles" /></a>
+									<h3><a href="https://dice-labs.com/apps/sliding-tiles/">Sliding Tiles</a></h3>
+									<p data-i18n="routes.sliding.body">Una de las primeras apps que servira como referencia para la futura estructura de paginas individuales dentro del dominio.</p>
+									<ul class="actions">
+										<li><a href="https://dice-labs.com/apps/sliding-tiles/" class="button style1" data-i18n="routes.sliding.button">Seguir pista</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title" data-i18n="footer.title">Contacto</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-envelope" data-i18n="footer.primaryEmail">Correo principal</h3>
+													<p>
+														<a href="mailto:dicelabs@outlook.com">dicelabs@outlook.com</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-envelope-open" data-i18n="footer.technicalEmail">Correo tecnico</h3>
+													<p>
+														<a href="mailto:dicelabs.dice@gmail.com">dicelabs.dice@gmail.com</a>
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li data-i18n="footer.copyright">&copy; DICE LABS.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<dialog id="karosserdata-viewer" class="pdf-viewer" aria-labelledby="karosserdata-viewer-title">
+			<div class="pdf-viewer__header">
+				<h2 id="karosserdata-viewer-title">Karosserdata</h2>
+				<button type="button" class="pdf-viewer__close" data-pdf-viewer-close data-i18n="pdf.close">Cerrar</button>
+			</div>
+			<iframe class="pdf-viewer__frame" src="documents/karosserdata-project-overview.pdf#view=FitH" title="Karosserdata project overview"></iframe>
+		</dialog>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/dice-labs-site.js?v=20260903c"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
