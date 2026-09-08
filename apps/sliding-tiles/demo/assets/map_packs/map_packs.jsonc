@@ -1,0 +1,323 @@
+{
+  "mapPacks": [
+    /*
+      Tutorial y Generated se siguen armando desde codigo.
+      Aqui solo dejamos los map packs persistentes del catalogo.
+    */
+    {
+      "id": "tiny",
+      "folderName": "18_Tiny",
+      "coverAssetFile": "4.webp",
+      "coverFolderName": "05_Dice_Labs_Stories",
+      "title": "Tiny",
+      "displayOrder": 1,
+      "difficulty": 1,
+      "soundtrack": "music_thebeach_4min",
+      "description": "Small puzzles with quick layouts and tight little twists.",
+      "premium": false
+    },
+
+    {
+      "id": "colossals",
+      "folderName": "19_Colossals",
+      "coverAssetFile": "19072026012643jhEG901d5d.webp",
+      "coverFolderName": "16_Eden",
+      "title": "Jumbo",
+      "displayOrder": 2,
+      "difficulty": 3,
+      "soundtrack": "music_liminal2",
+      "description": "Large-format boards built for long solves and heavy layouts.",
+      "premium": false
+    },
+
+    {
+      "id": "liminal_spaces",
+      "folderName": "07_Liminal_Spaces",
+      "coverAssetFile": "5 (3).webp",//"2.webp",
+      "title": "Liminal Spaces",
+      "displayOrder": 3,
+      "difficulty": 3,
+      "soundtrack": "music_liminal1",
+      "description": "Pasillos raros y lugares que no deberían existir.", // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "muses",
+      "folderName": "01_Muses",
+      "coverAssetFile": "cover.webp",
+      "title": "Muses",
+      "displayOrder": 4,
+      "difficulty": 2,
+      "soundtrack": "music_liminal1",
+      "description": "Internet icons.", // igual en todos los idiomas
+      "premium": false
+    },
+
+    {
+      "id": "aesthetic",
+      "folderName": "04_Aesthetic",
+      "coverAssetFile": "1.webp",
+      "title": "Aesthetic",
+      "displayOrder": 5,
+      "difficulty": 2,
+      "soundtrack": "music_liminal2",
+      "description": "Fondos y escenas para relajarse mientras deslizas.",  // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "algorithms",
+      "folderName": "03_Algorithms",
+      "coverAssetFile": "1.webp",
+      "title": "Algorithms",
+      "displayOrder": 6,
+      "difficulty": 2,
+      "soundtrack": "music_liminal2",
+      "description": "Memes de internet...",  // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "paws",
+      "folderName": "02_Paws",
+      "coverAssetFile": "Screenshot_20260612_184701_com.google.android.youtube.webp", // antes tenía "1.webp"
+      "title": "Paws",
+      "displayOrder": 7,
+      "difficulty": 1,
+      "soundtrack": "music_thebeach_4min",
+      "description": "Mascotas y compañía peluda",  // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "rush",
+      "folderName": "17_Rush",
+      "coverAssetFile": "Saw v clock.webp",
+      "coverFolderName": "04_Aesthetic",
+      "title": "Rush !",
+      "displayOrder": 8,
+      "difficulty": 2,
+      "soundtrack": "music_liminal2",
+      "description": "Compact boards designed around strict countdown pressure.",
+      "premium": false
+    },
+
+    {
+      "id": "backrooms",
+      "folderName": "08_Backrooms",
+      "coverAssetFile": "1.webp",
+      "title": "Backrooms",
+      "displayOrder": 9,
+      "difficulty": 3,
+      "soundtrack": "music_dark",
+      "description": "Paredes amarillas, energía incómoda.", // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "classic_creepypastas",
+      "folderName": "09_Classic_Creepypastas",
+      "coverAssetFile": "1.webp",
+      "title": "Classic Creepypastas",
+      "displayOrder": 10,
+      "difficulty": 3,
+      "soundtrack": "music_dark",
+      "description": "Personajes del terror clásico de internet.", // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "dice_labs_stories",
+      "folderName": "05_Dice_Labs_Stories",
+      "coverAssetFile": "1.webp",
+      "title": "Dice Labs Stories",
+      "displayOrder": 11,
+      "difficulty": 2,
+      "soundtrack": "music_liminal1",
+      "description": "Recuerdos del desarrrollador convertidos en niveles",  // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "yummy",
+      "folderName": "22_Yummy",
+      "coverAssetFile": "190720260139320ICwPSFcDJ.webp",
+      "title": "Yummy",
+      "displayOrder": 12,
+      "difficulty": 1,
+      "soundtrack": "music_thebeach_4min",
+      "description": "Comfort food, sugar rushes, and guilty cravings.",
+      "premium": false
+    },
+
+    {
+      "id": "dread",
+      "folderName": "06_Dread",
+      "coverAssetFile": "1.webp",
+      "title": "DREAD",
+      "displayOrder": 13,
+      "difficulty": 3,
+      "soundtrack": "music_dark",
+      "description": "P̷̢̰̼̟͍̺̯͌̔͆̈́̚̚͝h̴̳͎̱̪̯͋̒͐̾̈́͂͠ȏ̶̠̙̞̝̞̓̇̇͂̓́b̷̛͇̙̘̬̿͗̈́̍ḯ̶̬̬̈́̿͘͠ȧ̷̱͓̠̔͒s̶͙̈́̏̅̚͜, Ḧ̶̳̖́̑̒̎̀̾à̷̝͔̏͂ư̷̙̲͂̐͠n̷̥̦͒̋͠͝t̸̜̺̑͌̏i̴̯͛͊̓ń̸̜̮͒̕g̴̺̿̈́̓s̷̛̫͗̽, a̸̮̐̇̈́n̷̩̄͝d̸̯͆̐ U̸̘͛͋n̸̫͌̎ë̶̙́̽a̷̝̋͝s̸̟̚͠y̶̛̞͐ V̴̙̍̈́i̷̗̓͑s̵͔̓͂i̸̬̕͠ơ̶̞̽n̴̘͑͌s̴̰̿̕.",  // igual en todos los idiomas (sí, así, con esos caracteres "rotos". solo ten cuidado de no romper más caracteres, ya que siempre los rompes jajajajaaj)
+      "premium": false
+    },
+
+    {
+      "id": "numbers",
+      "folderName": "00_Numbers",
+      "coverAssetFile": "cover.webp",
+      "title": "Numbers",
+      "displayOrder": 14,
+      "difficulty": 1,
+      "soundtrack": "music_thebeach_4min",
+      "description": "Tableros clásicos con números.", // traducir siempre
+      "premium": false
+    },
+
+    {
+      "id": "personalized",
+      "folderName": "10_Personalized",
+      "coverAssetFile": "1.webp",
+      "title": "Personalized",
+      "displayOrder": 1,
+      "difficulty": 1,
+      "soundtrack": "music_liminal2",
+      "description": "Tu espacio premium para crear y editar niveles propios.", // esta descripcipción creo que no afecta (lo que está aquí no es lo que veo en la ejecución del juego, lo que veo en la ejecución del juego es lo que me gusta y quiero que se quede), a este map pack dejalo como esté en el backend, así funciona (y lo mismo aplica también el "generated")
+      "premium": true
+    },
+
+    {
+      "id": "luxury",
+      "folderName": "25_luxury",
+      "coverAssetFile": "jdunkinphoto-watch-7204672_1920.webp",
+      "title": "Luxury",
+      "displayOrder": 2,
+      "difficulty": 2,
+      "soundtrack": "music_premium1",
+      "description": "Polished details, rich textures, and opulent scenes.",
+      "premium": true
+    },
+
+    {
+      "id": "muses_2",
+      "folderName": "12_Muses_2",
+      "coverAssetFile": "covermuses2.webp",
+      "title": "Muses 2",
+      "displayOrder": 3,
+      "difficulty": 2,
+      "soundtrack": "music_liminal1",
+      "description": "Internet icons.", // igual en todos los idiomas
+      "premium": true
+    },
+
+    {
+      "id": "cosmos",
+      "folderName": "14_Cosmos",
+      "coverAssetFile": "19072026010131PeRsloCJny.webp",
+      "title": "Cosmos",
+      "displayOrder": 4,
+      "difficulty": 3,
+      "soundtrack": "music_premium1",
+      "description": "Nebulas, planets, starlight, and deep space.",
+      "premium": true
+    },
+
+    {
+      "id": "eden",
+      "folderName": "16_Eden",
+      "coverAssetFile": "19072026012125dmTHUL-mNs.webp",
+      "title": "E D E N",
+      "displayOrder": 5,
+      "difficulty": 3,
+      "soundtrack": "music_liminal2",
+      "description": "Nature, wildlife, petals, and living color.",
+      "premium": true
+    },
+
+    {
+      "id": "masterpieces",
+      "folderName": "21_Masterpieces",
+      "coverAssetFile": "1907202601323632NYo_Ij9c.webp",
+      "title": "Masterpieces",
+      "displayOrder": 6,
+      "difficulty": 3,
+      "soundtrack": "music_clairedelune",
+      "description": "Classic art, legends, and timeless figures.",
+      "premium": true
+    },
+
+    {
+      "id": "acropolis",
+      "folderName": "13_Acropolis",
+      "coverAssetFile": "19072026005926uERxFYK08u.webp",
+      "title": "Acropolis",
+      "displayOrder": 7,
+      "difficulty": 2,
+      "soundtrack": "music_premium1",
+      "description": "Monuments, skylines, and architecture with awe.", // de aquí en adelante todas las descripciones están bien, pero existen solo en inglés. agrega las traducciones a todos los otros idiomas también :)
+      "premium": true
+    },
+
+    {
+      "id": "silly_victories",
+      "folderName": "20_Silly_victories",
+      "coverAssetFile": "Screenshot_20260531_185014_com.instagram.android.webp",
+      "coverFolderName": "03_Algorithms",
+      "title": "Silly Victories",
+      "displayOrder": 8,// 8 para ser premium, 15 para normal
+      "difficulty": 1,
+      "soundtrack": "music_clairedelune",
+      "description": "Ridiculous boards where winning is the whole joke.",
+      "premium": true // true para ser premium
+    },
+
+    {
+      "id": "gradients",
+      "folderName": "24_Gradients",
+      "coverAssetFile": "cover.webp",
+      "title": "Gradients",
+      "displayOrder": 9,
+      "difficulty": 2,
+      "soundtrack": "music_clairedelune",
+      "description": "Abstract gradients, luminous color, and layered glow.",
+      "premium": true
+    },
+
+    {
+      "id": "horsepower",
+      "folderName": "15_Horsepower",
+      "coverAssetFile": "19072026010814Z8sj4lI3it.webp",
+      "title": "Horsepower",
+      "displayOrder": 10,
+      "difficulty": 2,
+      "soundtrack": "music_liminal2",
+      "description": "Cars, engines, chrome, and full-throttle motion.",
+      "premium": true
+    },
+
+    {
+      "id": "industrial",
+      "folderName": "23_industrial",
+      "coverAssetFile": "19072026015243BzB9rfzlT4.webp",
+      "title": "Industrial Hell",
+      "displayOrder": 11,
+      "difficulty": 2,
+      "soundtrack": "music_thebeach_4min",
+      "description": "Steel, pressure, machinery, and factory rhythm.",
+      "premium": true
+    },
+
+    {
+      "id": "yummy_2",
+      "folderName": "26_Yummy_2",
+      "coverAssetFile": "fernando-andrade-_P76trHTWDE-unsplash.webp",
+      "title": "Yummy 2",
+      "displayOrder": 12,
+      "difficulty": 1,
+      "soundtrack": "music_liminal1",
+      "description": "More comfort food, sweet cravings, and tasty moments.",
+      "premium": true
+    }
+  ]
+}
