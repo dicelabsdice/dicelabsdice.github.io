@@ -1,0 +1,744 @@
+html[data-theme] body,
+html[data-theme] #header,
+html[data-theme] #nav > ul,
+html[data-theme] #nav > ul > li,
+html[data-theme] #nav > ul > li > a,
+html[data-theme] .dropotron,
+html[data-theme] .dropotron a,
+html[data-theme] .wrapper,
+html[data-theme] .wrapper .title,
+html[data-theme] .wrapper.style1,
+html[data-theme] .wrapper.style2,
+html[data-theme] .wrapper.style3,
+html[data-theme] #footer,
+html[data-theme] #footer .title,
+html[data-theme] .button,
+html[data-theme] #titleBar .toggle:before,
+html[data-theme] #navPanel,
+html[data-theme] #navPanel .link,
+html[data-theme] #copyright ul {
+	-moz-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+	-webkit-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+	-ms-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+	transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+html[data-theme] .dropotron a.is-selected,
+html[data-theme] #navPanel .link.is-selected {
+	font-weight: 700;
+}
+
+html[data-theme="dark"] .dropotron a.is-selected,
+html[data-theme="dark"] #navPanel .link.is-selected {
+	background: rgba(255, 255, 255, 0.06);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+	color: #ffffff;
+}
+
+html[data-theme="dark"] #footer,
+html[data-theme="dark"] #footer .title {
+	background: #000000;
+}
+
+html[data-theme="light"] body,
+html[data-theme="light"] input,
+html[data-theme="light"] textarea,
+html[data-theme="light"] select {
+	color: #10161d;
+	background: #e1e6eb;
+}
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] h5,
+html[data-theme="light"] h6,
+html[data-theme="light"] strong,
+html[data-theme="light"] b {
+	color: #05090d;
+}
+
+html[data-theme="light"] a {
+	color: #0c1117;
+}
+
+html[data-theme="light"] a:hover {
+	color: #000000;
+}
+
+html[data-theme="light"] #header {
+	background: linear-gradient(180deg, rgba(210, 217, 224, 0.6), rgba(210, 217, 224, 0.78)), url("../../images/theme-light-bg.jpg?v=20260903") center center;
+	background-size: cover;
+}
+
+html[data-theme="light"] #header:before {
+	opacity: 0.08;
+}
+
+html[data-theme="light"] #logo h1 {
+	color: #04080d;
+	text-shadow: 0 3px 18px rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme="light"] #logo p {
+	color: rgba(10, 14, 18, 0.72);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+html[data-theme="light"] #nav > ul {
+	background: rgba(255, 255, 255, 0.84);
+	border-color: rgba(10, 14, 18, 0.16);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.7), 0 14px 34px rgba(12, 17, 22, 0.12);
+}
+
+html[data-theme="light"] #nav > ul > li {
+	border-left-color: rgba(10, 14, 18, 0.12);
+}
+
+html[data-theme="light"] #nav > ul > li > a,
+html[data-theme="light"] #nav > ul > li > span {
+	color: rgba(10, 14, 18, 0.92);
+	text-shadow: none;
+}
+
+html[data-theme="light"] #nav > ul > li:hover > a,
+html[data-theme="light"] #nav > ul > li.active > a,
+html[data-theme="light"] #nav > ul > li.active > span {
+	color: #000000;
+}
+
+html[data-theme="light"] .dropotron {
+	background: #f8fafc url("images/overlay.png");
+	background-color: rgba(248, 250, 252, 0.98);
+	border-color: rgba(10, 14, 18, 0.12);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.72), 0 16px 36px rgba(12, 17, 22, 0.12);
+}
+
+html[data-theme="light"] .dropotron a,
+html[data-theme="light"] .dropotron span {
+	color: rgba(10, 14, 18, 0.92);
+	border-top-color: rgba(10, 14, 18, 0.08);
+	text-shadow: none;
+}
+
+html[data-theme="light"] .dropotron li:hover > a,
+html[data-theme="light"] .dropotron li:hover > span {
+	color: #000000;
+}
+
+html[data-theme="light"] .dropotron a.is-selected,
+html[data-theme="light"] #navPanel .link.is-selected {
+	background: rgba(10, 14, 18, 0.08);
+	box-shadow: inset 0px 0px 0px 1px rgba(10, 14, 18, 0.08);
+	color: #000000;
+}
+
+html[data-theme="light"] .nav-flag {
+	box-shadow: 0 1px 8px rgba(12, 17, 22, 0.16);
+}
+
+html[data-theme="light"] .wrapper {
+	border-top-color: rgba(10, 14, 18, 0.14);
+}
+
+html[data-theme="light"] .wrapper .title {
+	border-top-color: rgba(10, 14, 18, 0.14);
+	border-left-color: rgba(10, 14, 18, 0.14);
+	border-right-color: rgba(10, 14, 18, 0.14);
+	color: #05090d;
+}
+
+html[data-theme="light"] .wrapper.style1 {
+	background: #e4e9ee;
+	color: #25303a;
+}
+
+html[data-theme="light"] .wrapper.style1 .title {
+	background: #e4e9ee;
+	color: #05090d;
+}
+
+html[data-theme="light"] .wrapper.style1 h1,
+html[data-theme="light"] .wrapper.style1 h2,
+html[data-theme="light"] .wrapper.style1 h3,
+html[data-theme="light"] .wrapper.style1 h4,
+html[data-theme="light"] .wrapper.style1 h5,
+html[data-theme="light"] .wrapper.style1 h6,
+html[data-theme="light"] .wrapper.style1 strong,
+html[data-theme="light"] .wrapper.style1 b,
+html[data-theme="light"] .wrapper.style1 a {
+	color: #05090d;
+}
+
+html[data-theme="light"] .wrapper.style2 {
+	background: #ced9e3 url("images/overlay.png");
+	color: #25303a;
+}
+
+html[data-theme="light"] .wrapper.style2 .title {
+	background: #ced9e3 url("images/overlay.png");
+	color: #05090d;
+}
+
+html[data-theme="light"] .wrapper.style3 {
+	background: #c0ceda url("images/overlay.png");
+	color: #212b35;
+}
+
+html[data-theme="light"] .wrapper.style3 .title {
+	background: #c0ceda url("images/overlay.png");
+	color: #05090d;
+}
+
+html[data-theme="light"] .wrapper.style2 h1,
+html[data-theme="light"] .wrapper.style2 h2,
+html[data-theme="light"] .wrapper.style2 h3,
+html[data-theme="light"] .wrapper.style2 h4,
+html[data-theme="light"] .wrapper.style2 h5,
+html[data-theme="light"] .wrapper.style2 h6,
+html[data-theme="light"] .wrapper.style2 strong,
+html[data-theme="light"] .wrapper.style2 b,
+html[data-theme="light"] .wrapper.style2 a,
+html[data-theme="light"] .wrapper.style3 h1,
+html[data-theme="light"] .wrapper.style3 h2,
+html[data-theme="light"] .wrapper.style3 h3,
+html[data-theme="light"] .wrapper.style3 h4,
+html[data-theme="light"] .wrapper.style3 h5,
+html[data-theme="light"] .wrapper.style3 h6,
+html[data-theme="light"] .wrapper.style3 strong,
+html[data-theme="light"] .wrapper.style3 b,
+html[data-theme="light"] .wrapper.style3 a {
+	color: #05090d;
+}
+
+html[data-theme="light"] .wrapper.style3 .image {
+	border: solid 10px #f8fafc;
+}
+
+html[data-theme="light"] #intro p.style1 {
+	color: #33404d;
+}
+
+html[data-theme="light"] #intro p.style2 {
+	color: #05090d;
+	background: rgba(255, 255, 255, 0.72);
+	box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.75), 0 14px 32px rgba(12, 17, 22, 0.12);
+	text-shadow: none;
+}
+
+html[data-theme="light"] #intro p.style3 {
+	color: #1f2932;
+}
+
+html[data-theme="light"] header.style1 p,
+html[data-theme="light"] #features header.style1 p {
+	color: #4b5967;
+}
+
+html[data-theme="light"] .feature-list section {
+	border-top-color: rgba(10, 14, 18, 0.12);
+}
+
+html[data-theme="light"] .feature-list h3 {
+	color: #05090d !important;
+}
+
+html[data-theme="light"] .feature-list h3:before {
+	color: #ffffff;
+	background: #0c1116 url("images/overlay.png");
+}
+
+html[data-theme="light"] #highlights .highlight h3,
+html[data-theme="light"] #highlights .highlight p {
+	color: #05090d;
+}
+
+html[data-theme="light"] #footer {
+	background: #d4dee7 url("images/overlay.png");
+	color: #24303b;
+}
+
+html[data-theme="light"] #footer h1,
+html[data-theme="light"] #footer h2,
+html[data-theme="light"] #footer h3,
+html[data-theme="light"] #footer h4,
+html[data-theme="light"] #footer h5,
+html[data-theme="light"] #footer h6,
+html[data-theme="light"] #footer strong,
+html[data-theme="light"] #footer b,
+html[data-theme="light"] #footer a {
+	color: #05090d;
+}
+
+html[data-theme="light"] #footer hr {
+	border-top-color: rgba(10, 14, 18, 0.08);
+}
+
+html[data-theme="light"] #footer .title {
+	background: #d4dee7 url("images/overlay.png");
+	color: #05090d;
+}
+
+html[data-theme="light"] #footer header.style1 {
+	border-bottom-color: rgba(10, 14, 18, 0.08);
+}
+
+html[data-theme="light"] #footer .feature-list section {
+	border-top-color: rgba(10, 14, 18, 0.08);
+}
+
+html[data-theme="light"] #footer .feature-list h3 {
+	color: #05090d !important;
+}
+
+html[data-theme="light"] #footer .feature-list h3:before {
+	color: #ffffff;
+	background: #0c1116 url("images/overlay.png");
+}
+
+html[data-theme="light"] #copyright {
+	border-top-color: rgba(10, 14, 18, 0.08);
+}
+
+html[data-theme="light"] #copyright ul {
+	color: rgba(10, 14, 18, 0.62);
+	background: rgba(255, 255, 255, 0.52);
+	box-shadow: inset 0px 0px 0px 1px rgba(10, 14, 18, 0.1);
+}
+
+html[data-theme="light"] #copyright ul li {
+	border-left-color: rgba(10, 14, 18, 0.08);
+}
+
+html[data-theme="light"] #copyright a:hover {
+	color: #000000;
+}
+
+html[data-theme="light"] input[type="button"],
+html[data-theme="light"] input[type="submit"],
+html[data-theme="light"] input[type="reset"],
+html[data-theme="light"] button,
+html[data-theme="light"] .button {
+	background: #f8fafc url("images/overlay.png");
+	border-color: rgba(10, 14, 18, 0.18);
+	color: #10161d;
+	text-shadow: none;
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.72), 0 10px 22px rgba(12, 17, 22, 0.12);
+}
+
+html[data-theme="light"] input[type="button"]:hover,
+html[data-theme="light"] input[type="submit"]:hover,
+html[data-theme="light"] input[type="reset"]:hover,
+html[data-theme="light"] button:hover,
+html[data-theme="light"] .button:hover {
+	background-color: #eef2f6;
+}
+
+html[data-theme="light"] input[type="button"].style1,
+html[data-theme="light"] input[type="submit"].style1,
+html[data-theme="light"] input[type="reset"].style1,
+html[data-theme="light"] button.style1,
+html[data-theme="light"] .button.style1 {
+	background: #0a0f14 url("images/overlay.png");
+	color: #ffffff !important;
+}
+
+html[data-theme="light"] #features .button.style1,
+html[data-theme="light"] #highlights .button.style1 {
+	color: #ffffff;
+}
+
+html[data-theme="light"] input[type="button"].style1:hover,
+html[data-theme="light"] input[type="submit"].style1:hover,
+html[data-theme="light"] input[type="reset"].style1:hover,
+html[data-theme="light"] button.style1:hover,
+html[data-theme="light"] .button.style1:hover {
+	background-color: #151b22;
+}
+
+html[data-theme="light"] input[type="button"].style2,
+html[data-theme="light"] input[type="submit"].style2,
+html[data-theme="light"] input[type="reset"].style2,
+html[data-theme="light"] button.style2,
+html[data-theme="light"] .button.style2 {
+	background: rgba(255, 255, 255, 0.76);
+	color: #10161d;
+	box-shadow: inset 0px 0px 0px 1px rgba(10, 14, 18, 0.16), 0 10px 22px rgba(12, 17, 22, 0.08);
+}
+
+html[data-theme="light"] input[type="button"].style2:hover,
+html[data-theme="light"] input[type="submit"].style2:hover,
+html[data-theme="light"] input[type="reset"].style2:hover,
+html[data-theme="light"] button.style2:hover,
+html[data-theme="light"] .button.style2:hover {
+	background: rgba(255, 255, 255, 0.94);
+	box-shadow: inset 0px 0px 0px 1px rgba(10, 14, 18, 0.22), 0 12px 24px rgba(12, 17, 22, 0.1);
+}
+
+html[data-theme="light"] input[type="button"].style3,
+html[data-theme="light"] input[type="submit"].style3,
+html[data-theme="light"] input[type="reset"].style3,
+html[data-theme="light"] button.style3,
+html[data-theme="light"] .button.style3 {
+	background: #d7dfe8 url("images/overlay.png");
+	color: #0b1016;
+}
+
+html[data-theme="light"] input[type="button"].style3:hover,
+html[data-theme="light"] input[type="submit"].style3:hover,
+html[data-theme="light"] input[type="reset"].style3:hover,
+html[data-theme="light"] button.style3:hover,
+html[data-theme="light"] .button.style3:hover {
+	background-color: #cbd6e1;
+}
+
+html[data-theme="light"] #titleBar .toggle:before {
+	color: rgba(10, 14, 18, 0.92);
+	background-color: rgba(255, 255, 255, 0.92);
+	box-shadow: inset 0px 0px 0px 1px rgba(10, 14, 18, 0.14), 0 10px 24px rgba(12, 17, 22, 0.14);
+}
+
+html[data-theme="light"] #titleBar .toggle:active:before {
+	background-color: rgba(227, 233, 239, 0.98);
+}
+
+html[data-theme="light"] #navPanel {
+	background: #edf2f6 url("images/overlay.png");
+	box-shadow: inset -3px 0px 4px 0px rgba(255, 255, 255, 0.45);
+}
+
+html[data-theme="light"] #navPanel .link {
+	color: rgba(10, 14, 18, 0.72);
+	border-top-color: rgba(10, 14, 18, 0.08);
+}
+
+html[data-theme="light"] #navPanel .depth-0 {
+	color: #05090d;
+}
+
+html[data-theme="gray"] .dropotron a.is-selected,
+html[data-theme="gray"] #navPanel .link.is-selected {
+	background: rgba(255, 255, 255, 0.08);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.12);
+	color: #ffffff;
+}
+
+html[data-theme="gray"] body,
+html[data-theme="gray"] input,
+html[data-theme="gray"] textarea,
+html[data-theme="gray"] select {
+	color: #d6dde4;
+	background: #363d45;
+}
+
+html[data-theme="gray"] h1,
+html[data-theme="gray"] h2,
+html[data-theme="gray"] h3,
+html[data-theme="gray"] h4,
+html[data-theme="gray"] h5,
+html[data-theme="gray"] h6,
+html[data-theme="gray"] strong,
+html[data-theme="gray"] b {
+	color: #f5f8fb;
+}
+
+html[data-theme="gray"] a {
+	color: #f0f4f8;
+}
+
+html[data-theme="gray"] #header {
+	background: linear-gradient(180deg, rgba(70, 78, 87, 0.28), rgba(70, 78, 87, 0.42)), url("../../images/theme-gray-bg.jpg?v=20260830") center center;
+	background-size: cover;
+}
+
+html[data-theme="gray"] #header:before {
+	opacity: 0.18;
+}
+
+html[data-theme="gray"] #logo h1 {
+	color: #ffffff;
+}
+
+html[data-theme="gray"] #logo p {
+	color: rgba(255, 255, 255, 0.64);
+}
+
+html[data-theme="gray"] #nav > ul {
+	background: rgba(16, 19, 23, 0.7);
+	border-color: rgba(255, 255, 255, 0.16);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.12), 0 14px 34px rgba(0, 0, 0, 0.42);
+}
+
+html[data-theme="gray"] #nav > ul > li {
+	border-left-color: rgba(255, 255, 255, 0.14);
+}
+
+html[data-theme="gray"] #nav > ul > li > a,
+html[data-theme="gray"] #nav > ul > li > span {
+	color: rgba(255, 255, 255, 0.92);
+}
+
+html[data-theme="gray"] .dropotron {
+	background: #1f242b url("images/overlay.png");
+	background-color: rgba(31, 36, 43, 0.96);
+	border-color: rgba(255, 255, 255, 0.16);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.12), 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="gray"] .dropotron a,
+html[data-theme="gray"] .dropotron span {
+	color: rgba(255, 255, 255, 0.92);
+	border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="gray"] .wrapper {
+	border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+html[data-theme="gray"] .wrapper .title {
+	border-top-color: rgba(255, 255, 255, 0.16);
+	border-left-color: rgba(255, 255, 255, 0.16);
+	border-right-color: rgba(255, 255, 255, 0.16);
+}
+
+html[data-theme="gray"] .wrapper.style1 {
+	background: #343b43;
+	color: rgba(214, 221, 228, 0.82);
+}
+
+html[data-theme="gray"] .wrapper.style1 .title {
+	background: #343b43;
+	color: #ffffff;
+}
+
+html[data-theme="gray"] .wrapper.style2 {
+	background: #46505a url("images/overlay.png");
+	color: rgba(214, 221, 228, 0.8);
+}
+
+html[data-theme="gray"] .wrapper.style2 .title {
+	background: #46505a url("images/overlay.png");
+	color: #ffffff;
+}
+
+html[data-theme="gray"] .wrapper.style3 {
+	background: #58636e url("images/overlay.png");
+	color: rgba(224, 229, 235, 0.84);
+}
+
+html[data-theme="gray"] .wrapper.style3 .title {
+	background: #58636e url("images/overlay.png");
+	color: #ffffff;
+}
+
+html[data-theme="gray"] .wrapper.style3 .image {
+	border: solid 10px #363e48;
+}
+
+html[data-theme="gray"] #intro p.style2 {
+	background: rgba(255, 255, 255, 0.07);
+	box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.12), 0 14px 32px rgba(0, 0, 0, 0.32);
+}
+
+html[data-theme="gray"] header.style1 p,
+html[data-theme="gray"] #features header.style1 p {
+	color: #aab4bf;
+}
+
+html[data-theme="gray"] .feature-list section {
+	border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="gray"] .feature-list h3:before {
+	background: #101419 url("images/overlay.png");
+}
+
+html[data-theme="gray"] #footer {
+	background: #2c333a url("images/overlay.png");
+	color: rgba(214, 221, 228, 0.7);
+}
+
+html[data-theme="gray"] #footer hr {
+	border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="gray"] #footer .title {
+	background: #2c333a url("images/overlay.png");
+	color: #ffffff;
+}
+
+html[data-theme="gray"] #footer header.style1 {
+	border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="gray"] #footer .feature-list section {
+	border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="gray"] #footer .feature-list h3:before {
+	background: #191f26 url("images/overlay.png");
+}
+
+html[data-theme="gray"] #copyright {
+	border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="gray"] #copyright ul {
+	color: rgba(255, 255, 255, 0.32);
+	background: rgba(0, 0, 0, 0.12);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="gray"] #copyright ul li {
+	border-left-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="gray"] input[type="button"],
+html[data-theme="gray"] input[type="submit"],
+html[data-theme="gray"] input[type="reset"],
+html[data-theme="gray"] button,
+html[data-theme="gray"] .button {
+	background: #1d2228 url("images/overlay.png");
+	border-color: rgba(255, 255, 255, 0.18);
+	color: #f7fafc;
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.08), 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="gray"] input[type="button"]:hover,
+html[data-theme="gray"] input[type="submit"]:hover,
+html[data-theme="gray"] input[type="reset"]:hover,
+html[data-theme="gray"] button:hover,
+html[data-theme="gray"] .button:hover {
+	background-color: #2b3138;
+}
+
+html[data-theme="gray"] input[type="button"].style1,
+html[data-theme="gray"] input[type="submit"].style1,
+html[data-theme="gray"] input[type="reset"].style1,
+html[data-theme="gray"] button.style1,
+html[data-theme="gray"] .button.style1 {
+	background: #090c10 url("images/overlay.png");
+	color: #ffffff;
+}
+
+html[data-theme="gray"] input[type="button"].style2,
+html[data-theme="gray"] input[type="submit"].style2,
+html[data-theme="gray"] input[type="reset"].style2,
+html[data-theme="gray"] button.style2,
+html[data-theme="gray"] .button.style2 {
+	background: rgba(255, 255, 255, 0.06);
+	color: #f7fafc;
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.22), 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="gray"] input[type="button"].style2:hover,
+html[data-theme="gray"] input[type="submit"].style2:hover,
+html[data-theme="gray"] input[type="reset"].style2:hover,
+html[data-theme="gray"] button.style2:hover,
+html[data-theme="gray"] .button.style2:hover {
+	background: rgba(255, 255, 255, 0.11);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.32), 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="gray"] input[type="button"].style3,
+html[data-theme="gray"] input[type="submit"].style3,
+html[data-theme="gray"] input[type="reset"].style3,
+html[data-theme="gray"] button.style3,
+html[data-theme="gray"] .button.style3 {
+	background: #2b3138 url("images/overlay.png");
+	color: #ffffff;
+}
+
+html[data-theme="gray"] #titleBar .toggle:before {
+	color: rgba(255, 255, 255, 0.92);
+	background-color: rgba(18, 21, 25, 0.78);
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.16), 0 10px 24px rgba(0, 0, 0, 0.36);
+}
+
+html[data-theme="gray"] #titleBar .toggle:active:before {
+	background-color: rgba(90, 96, 104, 0.8);
+}
+
+html[data-theme="gray"] #navPanel {
+	background: #1d2229 url("images/overlay.png");
+	box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="gray"] #navPanel .link {
+	color: rgba(255, 255, 255, 0.6);
+	border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="gray"] #navPanel .depth-0 {
+	color: #ffffff;
+}
+
+.pdf-viewer {
+	width: min(94vw, 1200px);
+	height: min(90vh, 900px);
+	margin: auto;
+	padding: 0;
+	overflow: hidden;
+	color: #f5f8fb;
+	background: #101419;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+}
+
+.pdf-viewer::backdrop {
+	background: rgba(0, 0, 0, 0.78);
+	backdrop-filter: blur(4px);
+}
+
+.pdf-viewer__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 3.5em;
+	padding: 0.75em 1.25em;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.pdf-viewer__header h2 {
+	margin: 0;
+	color: inherit;
+	font-size: 1em;
+	letter-spacing: 0.12em;
+}
+
+.pdf-viewer__close {
+	min-width: 0;
+	margin: 0;
+	padding: 0.55em 0.9em;
+	font-size: 0.75em;
+	line-height: 1;
+}
+
+.pdf-viewer__frame {
+	display: block;
+	width: 100%;
+	height: calc(100% - 3.5em);
+	border: 0;
+	background: #ffffff;
+}
+
+html[data-theme="light"] .pdf-viewer {
+	color: #05090d;
+	background: #e4e9ee;
+	border-color: rgba(10, 14, 18, 0.32);
+}
+
+html[data-theme="light"] .pdf-viewer__header {
+	border-bottom-color: rgba(10, 14, 18, 0.18);
+}
+
+@media screen and (max-width: 736px) {
+	.pdf-viewer {
+		width: 100vw;
+		height: 100vh;
+		max-width: none;
+		max-height: none;
+		border: 0;
+	}
+}

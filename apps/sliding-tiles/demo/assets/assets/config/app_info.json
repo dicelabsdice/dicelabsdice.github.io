@@ -1,0 +1,45 @@
+{
+  "about": {
+    "title": {
+      "es": "Acerca de",
+      "en": "About",
+      "de": "\u00dcber",
+      "fr": "\u00c0 propos",
+      "ru": "\u041e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0438"
+    },
+    "body": {
+      "es": "Hola!... Para usar todas las funciones del juego, descárgalo en Android o en Windows. Espero que lo disfrutes tanto como yo disfruté haciéndolo. Esta app no guarda ninguna clase de información sobre tí o tu cuenta: Cookies, permisos intrusivos ni datos delicados. Por lo tanto los datos y progreso de tus partidas no se respaldan en la nube ni se conservan de ninguna otra forma. Seguiré pensando en nuevos puzzles, minijuegos o curiosidades y próximamente los estaré subiendo ;)",
+      "en": "Hi!... To use all the game's features, download it on Android or Windows. I hope you enjoy it as much as I enjoyed making it. This app doesn't store any kind of information about you or your account: no cookies, intrusive permissions, or sensitive data. Therefore, your game data and progress are not backed up to the cloud and are not retained in any other way. I'll keep coming up with new puzzles, mini-games, and curiosities, and I'll be uploading them soon ;)",
+      "de": "Hallo!... Um alle Funktionen des Spiels zu nutzen, lade es unter Android oder Windows herunter. Ich hoffe, du hast genauso viel Spaß damit, wie ich beim Entwickeln hatte. Diese App speichert keinerlei Informationen über dich oder dein Konto: keine Cookies, aufdringlichen Berechtigungen oder sensiblen Daten. Daher werden deine Spieldaten und dein Spielfortschritt nicht in der Cloud gesichert und auch in keiner anderen Form gespeichert. Ich werde weiterhin über neue Puzzles, Minispiele und Kuriositäten nachdenken und sie demnächst hochladen ;)",
+      "fr": "Bonjour!... Pour utiliser toutes les fonctions du jeu, télécharge-le sur Android ou sur Windows. J'espère que tu l'apprécieras autant que j'ai pris plaisir à la créer. Cette application ne stocke aucune information sur toi ou ton compte : ni cookies, ni autorisations intrusives, ni données sensibles. Par conséquent, les données et la progression de tes parties ne sont ni sauvegardées dans le cloud ni conservées d'aucune autre manière. Je continuerai à imaginer de nouveaux puzzles, mini-jeux ou curiosités, et je les mettrai bientôt en ligne ;)",
+      "ru": "Привет!... Чтобы использовать все функции игры, скачай её на Android или Windows. Надеюсь, она понравится вам так же, как мне понравилось её создавать. Это приложение не сохраняет никакой информации о вас или вашей учётной записи: никаких файлов cookie, навязчивых разрешений или конфиденциальных данных. Поэтому данные и прогресс ваших игр не сохраняются в облаке и не хранятся каким-либо иным образом. Я продолжу придумывать новые головоломки, мини-игры и всякие интересности и скоро буду их добавлять ;)"
+    }
+  },
+  "premium": {
+    "title": {
+      "es": "Premium",
+      "en": "Premium",
+      "de": "Premium",
+      "fr": "Premium",
+      "ru": "Premium"
+    },
+    "body": {
+      "es": "\u2022 Elimina los anuncios.\n\u2022 Crea tus propios tableros (puedes usar imágenes de tu dispositivo).\n\u2022 Usa el generador aleatorio para jugar en tableros completamente \u00fanicos.\n\u2022 Desbloquea tableros exclusivos.\n\u2022 Crea copias de niveles existentes para modificarlos.\n\nLos mapas generados aleatoriamente y los personalizados se guardan localmente. No se respaldan en ninguna nube.",
+      "en": "\u2022 Removes ads.\n\u2022 Create your own boards (you can use images from your device).\n\u2022 Use the random generator to play on completely unique boards.\n\u2022 Unlock exclusive boards.\n\u2022 Create copies of existing levels to modify them.\n\nRandomly generated and personalized maps are saved locally. They are not backed up to any cloud.",
+      "de": "\u2022 Entfernt Werbung.\n\u2022 Erstelle deine eigenen Bretter (du kannst Bilder von deinem Gerät verwenden).\n\u2022 Nutze den Zufallsgenerator, um auf komplett einzigartigen Brettern zu spielen.\n\u2022 Schalte exklusive Bretter frei.\n\u2022 Erstelle Kopien vorhandener Level, um sie zu bearbeiten.\n\nZuf\u00e4llig generierte und personalisierte Karten werden lokal gespeichert. Sie werden nicht in einer Cloud gesichert.",
+      "fr": "\u2022 Supprime les publicit\u00e9s.\n\u2022 Cr\u00e9e tes propres plateaux (vous pouvez utiliser des images de votre appareil).\n\u2022 Utilise le g\u00e9n\u00e9rateur al\u00e9atoire pour jouer sur des plateaux compl\u00e8tement uniques.\n\u2022 D\u00e9bloque des plateaux exclusifs.\n\u2022 Cr\u00e9e des copies de niveaux existants pour les modifier.\n\nLes cartes g\u00e9n\u00e9r\u00e9es al\u00e9atoirement et les cartes personnalis\u00e9es sont enregistr\u00e9es localement. Elles ne sont sauvegard\u00e9es sur aucun cloud.",
+      "ru": "\u2022 Убирает рекламу.\n\u2022 Позволяет создавать собственные поля (можно использовать изображения с вашего устройства).\n\u2022 Используй случайный генератор для игры на полностью уникальных полях.\n\u2022 Открывай эксклюзивные поля.\n\u2022 Создавай копии существующих уровней, чтобы изменять их.\n\nСлучайно созданные и персональные карты сохраняются локально. Резервное копирование в облако не выполняется."
+    },
+    "galleryAssets": [
+      "shot_01.webp",
+      "shot_02.webp",
+      "shot_03.webp",
+      "shot_04.webp",
+      "shot_05.webp"
+
+    ]
+  },
+  "links": {
+    "privacyPolicy": "https://dice-labs.com/apps/sliding-tiles/privacy/"
+  }
+}
