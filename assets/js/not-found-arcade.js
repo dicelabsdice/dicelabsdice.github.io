@@ -1,4 +1,5 @@
 import { games, WIDTH, HEIGHT } from '/assets/js/not-found-games.js?v=20261113-geometry1';
+import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261113-audio1';
 
 const launcher = document.querySelector('.action-play');
 const dialog = document.querySelector('#arcade');
@@ -21,6 +22,18 @@ function setupArcade() {
   const startButton = dialog.querySelector('.game-start');
   const restartButton = dialog.querySelector('.game-restart');
   const randomButton = dialog.querySelector('.game-random');
+  const soundButton = dialog.querySelector('.game-sound');
+  const sound = createArcadeSound();
+  const feedback = createGameFeedback(sound);
+  const syncSoundButton = () => {
+    if (!soundButton) return;
+    soundButton.hidden = !sound.supported;
+    soundButton.setAttribute('aria-pressed', String(sound.enabled));
+    soundButton.setAttribute('aria-label', sound.enabled ? 'Sound on. Mute game sounds' : 'Sound off. Enable game sounds');
+    soundButton.title = sound.enabled ? 'Mute sounds' : 'Enable sounds';
+  };
+  syncSoundButton();
+  soundButton?.addEventListener('click', () => { sound.setEnabled(!sound.enabled); syncSoundButton(); });
   const keyboard = new Set();
   const pointers = new Map();
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -46,6 +59,7 @@ function setupArcade() {
     game?.draw(ctx);
     ctx.restore();
     if (game) {
+      feedback(game, selected.id);
       const s = game.state;
       let detail = `Score ${s.score}`;
       if (selected.id === 'pong') detail = `You ${s.score} : ${s.opponent} CPU`;
@@ -108,6 +122,7 @@ function setupArcade() {
   }
 
   function pause() {
+    sound.stop();
     if (phase !== 'playing') return;
     phase = 'paused'; stopFrame(); clearInput();
     showMessage('Paused', 'Press Resume or P.');
@@ -118,10 +133,12 @@ function setupArcade() {
     if (!game || phase === 'rolling' || phase === 'closed' || phase === 'ended') return;
     if (action !== 'flag' && action !== 'flag-cell' && phase !== 'playing') start();
     game.press?.(action);
+    if (selected.id === 'flappy' && (action === 'action' || action === 'up') && !game.state.outcome) sound.play('flap');
     draw(); finishIfNeeded();
   }
 
   function chooseGame() {
+    sound.stop();
     stopFrame(); stopRoll(); clearInput();
     const version = rollVersion;
     phase = 'rolling'; game = null; selected = null;
@@ -139,7 +156,11 @@ function setupArcade() {
       die.dataset.face = String(index + 1);
       selected = games[index]; game = selected.create(); phase = 'ready';
       dialog.dataset.game = selected.id;
-      title.textContent = `${index + 1} / ${selected.name}`;
+      const face = document.createElement('span');
+      face.className = 'game-title-die';
+      face.setAttribute('aria-hidden', 'true');
+      face.textContent = `${String.fromCodePoint(0x2680 + index)}\uFE0E`;
+      title.replaceChildren(face, document.createTextNode(` ${selected.name}`));
       hint.textContent = `${selected.hint} \u00b7 P pause`;
       touchHint.textContent = selected.touch;
       canvas.setAttribute('aria-label', `${selected.name} game board`);
@@ -159,18 +180,22 @@ function setupArcade() {
 
   launcher.hidden = false;
   launcher.addEventListener('click', () => {
+    sound.unlock();
     dialog.showModal(); document.body.classList.add('arcade-open'); chooseGame();
   });
   dialog.querySelector('.game-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
+    sound.stop();
     stopFrame(); stopRoll(); clearInput(); phase = 'closed'; game = null;
     document.body.classList.remove('arcade-open'); launcher.focus({ preventScroll: true });
   });
   startButton.addEventListener('click', () => {
+    sound.unlock();
     if (phase === 'playing') pause(); else { start(); canvas.focus({ preventScroll: true }); }
   });
   restartButton.addEventListener('click', () => {
     if (!selected || phase === 'rolling') return;
+    sound.stop(); sound.unlock();
     stopFrame(); clearInput(); game = selected.create(); phase = 'ready'; start(); canvas.focus({ preventScroll: true });
   });
   randomButton.addEventListener('click', chooseGame);
@@ -178,6 +203,7 @@ function setupArcade() {
   const keys = { ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down', a: 'left', d: 'right', w: 'up', s: 'down', ' ': 'action', Enter: 'action', f: 'flag-cell' };
   dialog.addEventListener('keydown', event => {
     if (event.key === 'Escape') return;
+    sound.unlock();
     if (event.key.toLowerCase() === 'p') { event.preventDefault(); if (phase === 'playing') pause(); else if (phase === 'paused') start(); return; }
     const action = keys[event.key] || keys[event.key.toLowerCase()];
     if (!action || (event.target.tagName === 'BUTTON' && (event.key === ' ' || event.key === 'Enter'))) return;
@@ -193,6 +219,7 @@ function setupArcade() {
   canvas.addEventListener('pointerdown', event => {
     if (event.button !== 0 || !game || phase === 'ended' || phase === 'rolling') return;
     if (gesture && gesture.id !== event.pointerId) return;
+    sound.unlock();
     if (event.pointerType !== 'mouse') lastTouch = performance.now();
     event.preventDefault(); canvas.setPointerCapture(event.pointerId); canvas.focus({ preventScroll: true });
     start();
@@ -207,6 +234,7 @@ function setupArcade() {
     } else {
       if (selected.id === 'invaders') pointers.set(event.pointerId, 'action');
       game.point?.(...point(event), 'down'); draw(); finishIfNeeded();
+      if (selected.id === 'flappy' && !game.state.outcome) sound.play('flap');
     }
   });
   canvas.addEventListener('pointermove', event => {

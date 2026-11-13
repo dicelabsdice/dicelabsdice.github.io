@@ -8,8 +8,8 @@
   <title>404 | A bad roll. DICE LABS</title>
   <link rel="icon" type="image/png" href="/images/logo-blanco.png?v=20260902">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900&amp;display=swap">
-  <link rel="stylesheet" href="/assets/css/not-found.css?v=20261113-geometry1">
-  <script type="module" src="/assets/js/not-found-arcade.js?v=20261113-geometry1"></script>
+  <link rel="stylesheet" href="/assets/css/not-found.css?v=20261113-title-dice1">
+  <script type="module" src="/assets/js/not-found-arcade.js?v=20261113-title-dice1"></script>
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -42,7 +42,10 @@
     </header>
     <button class="game-close" type="button" aria-label="Close game" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
     <div class="game-stage">
-      <div class="game-hud"><span class="game-score">Score 0</span><span class="game-status" role="status" aria-live="polite" aria-atomic="true">Choosing a game.</span></div>
+      <div class="game-hud">
+        <span class="game-score">Score 0</span><span class="game-status" role="status" aria-live="polite" aria-atomic="true">Choosing a game.</span>
+        <button class="game-sound" type="button" aria-label="Sound on. Mute game sounds" aria-pressed="true" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z"/><path class="sound-waves" d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-muted" d="m16 9 5 6m0-6-5 6"/></svg></button>
+      </div>
       <div class="game-board">
         <div class="game-surface">
           <canvas width="576" height="360" tabindex="0" aria-label="Game board" aria-describedby="game-hint game-touch">This mini arcade needs a browser with canvas support.</canvas>
