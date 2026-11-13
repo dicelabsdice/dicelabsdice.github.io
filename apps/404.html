@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <title>404 | A bad roll. DICE LABS</title>
+  <link rel="icon" type="image/png" href="/images/logo-blanco.png?v=20260902">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/not-found.css?v=20261113-geometry1">
+  <script type="module" src="/assets/js/not-found-arcade.js?v=20261113-geometry1"></script>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="DICE LABS home">DICE LABS<span class="brand-dot" aria-hidden="true"></span></a>
+      <span class="motto">Keep rolling</span>
+    </header>
+
+    <main>
+      <div class="error-number" aria-hidden="true">404<span class="period">.</span></div>
+      <p class="eyebrow">Error 404 / Page not found</p>
+      <h1>Well, this is <br>a bad roll.</h1>
+      <p class="explanation">This page rolled off the table.<br>Let's get you back in the game.</p>
+      <nav class="actions" aria-label="Find your way back">
+        <a class="action action-primary" href="/">Back to home <span aria-hidden="true">&nearr;</span></a>
+        <a class="action action-secondary" href="/apps/">Explore apps <span aria-hidden="true">&rarr;</span></a>
+        <button class="action action-play" type="button" hidden aria-haspopup="dialog" aria-controls="arcade">
+          <span class="mini-die" data-face="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span>Play random game</span>
+        </button>
+      </nav>
+    </main>
+  </div>
+  <dialog class="arcade-dialog" id="arcade" aria-labelledby="game-title" aria-describedby="game-hint game-touch">
+    <header class="arcade-masthead">
+      <a class="brand" href="/" aria-label="DICE LABS home">DICE LABS<span class="brand-dot" aria-hidden="true"></span></a>
+      <h2 id="game-title">Rolling the dice...</h2>
+      <span class="motto">Keep rolling</span>
+    </header>
+    <button class="game-close" type="button" aria-label="Close game" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div class="game-stage">
+      <div class="game-hud"><span class="game-score">Score 0</span><span class="game-status" role="status" aria-live="polite" aria-atomic="true">Choosing a game.</span></div>
+      <div class="game-board">
+        <div class="game-surface">
+          <canvas width="576" height="360" tabindex="0" aria-label="Game board" aria-describedby="game-hint game-touch">This mini arcade needs a browser with canvas support.</canvas>
+          <div class="stage-message" aria-hidden="true"><strong>Ready?</strong><span>Press Play to begin.</span></div>
+          <div class="dice-roll" aria-hidden="true"><span class="mini-die" data-face="4"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>Let fate pick your game.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="game-footer">
+      <p class="game-controls"><strong id="game-hint">Choosing your controls...</strong><strong id="game-touch"></strong></p>
+      <div class="game-toolbar">
+        <button class="game-start" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg><span>Play</span></button>
+        <button class="game-restart" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11a8 8 0 1 1 2 6M4 4v7h7"/></svg><span>Restart</span></button>
+        <button class="game-random" type="button"><span class="mini-die" data-face="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>Roll again</span></button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
