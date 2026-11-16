@@ -1,5 +1,5 @@
 import { games, WIDTH, HEIGHT } from '/assets/js/not-found-games.js?v=20261115-actions1';
-import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261115-volume350';
+import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261115-volume3x2';
 
 const launcher = document.querySelector('.action-play');
 const dialog = document.querySelector('#arcade');
@@ -136,8 +136,9 @@ function setupArcade() {
     draw(); finishIfNeeded();
   }
 
-  function chooseGame() {
+  function chooseGame(playCue = false) {
     sound.stop();
+    if (playCue) sound.play('roll');
     stopFrame(); stopRoll(); clearInput();
     const version = rollVersion;
     phase = 'rolling'; game = null; selected = null;
@@ -190,14 +191,15 @@ function setupArcade() {
   });
   startButton.addEventListener('click', () => {
     sound.unlock();
-    if (phase === 'playing') pause(); else { start(); canvas.focus({ preventScroll: true }); }
+    if (phase === 'playing') pause();
+    else { sound.play('start'); start(); canvas.focus({ preventScroll: true }); }
   });
   restartButton.addEventListener('click', () => {
     if (!selected || phase === 'rolling') return;
-    sound.stop(); sound.unlock();
+    sound.stop(); sound.unlock(); sound.play('restart');
     stopFrame(); clearInput(); game = selected.create(); phase = 'ready'; start(); canvas.focus({ preventScroll: true });
   });
-  randomButton.addEventListener('click', chooseGame);
+  randomButton.addEventListener('click', () => chooseGame(true));
 
   const keys = { ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down', a: 'left', d: 'right', w: 'up', s: 'down', ' ': 'action', Enter: 'action', f: 'flag-cell' };
   dialog.addEventListener('keydown', event => {

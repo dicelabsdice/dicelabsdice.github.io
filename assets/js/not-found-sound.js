@@ -10,6 +10,9 @@ const tunes = {
   shot: [[1200, 0, .09, 'square', 180]],
   move: [[180, 0, .035, 'triangle', 240]],
   bounce: [[460, 0, .065, 'square', 720]],
+  start: [[392, 0, .07, 'triangle'], [587, .055, .1]],
+  restart: [[784, 0, .055], [523, .05, .07], [784, .11, .09]],
+  roll: [[330, 0, .05, 'square'], [440, .045, .05], [660, .09, .09]],
   hurt: [[220, 0, .1, 'triangle', 110]],
   win: [[523, 0, .1], [659, .1, .1], [784, .2, .16]],
   lose: [[392, 0, .14], [294, .14, .14], [196, .28, .16], [147, .44, .28, 'square', 73]]
@@ -32,8 +35,8 @@ export function createArcadeSound(host = globalThis) {
     try {
       if (!context) {
         context = new Context(); master = context.createGain();
-        // 350% of the previous global level; a limiter catches only overlapping peaks.
-        master.gain.value = 1.75;
+        // Three times the previous global level; a limiter catches only overlapping peaks.
+        master.gain.value = 5.25;
         if (context.createDynamicsCompressor) {
           limiter = context.createDynamicsCompressor();
           limiter.threshold.value = -3;
@@ -102,7 +105,7 @@ export function createGameFeedback(sound) {
         for (const [name, count] of Object.entries(next.sounds)) {
           if (count > (previous.sounds[name] || 0)) sound.play(name);
         }
-        if (['breakout', 'pong', 'invaders', 'mines'].includes(id) && next.position !== previous.position) sound.play('move');
+        if (id === 'mines' && next.position !== previous.position) sound.play('move');
         if (['breakout', 'pong'].includes(id) && (next.vx !== previous.vx || next.vy !== previous.vy) && next.score === previous.score && next.lives === previous.lives && next.opponent === previous.opponent) sound.play('bounce');
       }
     } else if (!next.outcome) {

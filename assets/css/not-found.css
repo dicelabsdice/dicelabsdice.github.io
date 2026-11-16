@@ -145,7 +145,7 @@ body.arcade-open .masthead { visibility: hidden; }
 .arcade-masthead .brand { justify-self: start; white-space: nowrap; }
 .arcade-masthead .motto { justify-self: end; white-space: nowrap; }
 .arcade-masthead h2 { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.2; margin: 0; text-align: center; }
-.game-title-die { font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", sans-serif; font-weight: 700; font-size: 1.15em; line-height: 1; vertical-align: -0.04em; font-variant-emoji: text; }
+.game-title-die { font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", sans-serif; font-weight: 400; font-size: 1.15em; line-height: 1; vertical-align: -0.04em; font-variant-emoji: text; }
 .arcade-dialog button { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border: 1px solid var(--ink); border-radius: 0; background: #fff; color: var(--ink); font: 700 0.82rem "Source Sans Pro", "Trebuchet MS", sans-serif; min-height: 44px; padding: 0.45rem 0.75rem; cursor: pointer; transition: background-color 0.2s ease, color 0.2s ease, scale 0.18s ease; }
 .arcade-dialog button:enabled:hover { background: #e7e7e7; }
 .arcade-dialog button:disabled { opacity: 0.4; cursor: default; }
