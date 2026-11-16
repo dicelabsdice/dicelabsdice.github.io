@@ -1,5 +1,5 @@
 import { games, WIDTH, HEIGHT } from '/assets/js/not-found-games.js?v=20261115-actions1';
-import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261115-volume3x2';
+import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261115-pause-ready';
 
 const launcher = document.querySelector('.action-play');
 const dialog = document.querySelector('#arcade');
@@ -121,12 +121,13 @@ function setupArcade() {
     draw();
   }
 
-  function pause() {
+  function pause(playCue = false) {
     sound.stop();
     if (phase !== 'playing') return;
     phase = 'paused'; stopFrame(); clearInput();
     showMessage('Paused', 'Press Resume or P.');
     setStartLabel('Resume'); setText(status, 'Paused');
+    if (playCue) sound.play('pause');
   }
 
   function send(action) {
@@ -165,6 +166,7 @@ function setupArcade() {
       touchHint.textContent = selected.touch;
       canvas.setAttribute('aria-label', `${selected.name} game board`);
       rolling.hidden = true;
+      sound.stop(); sound.play('ready');
       showMessage('Ready?', 'Press Play to begin.');
       setText(status, 'Ready'); setStartLabel('Play');
       startButton.disabled = restartButton.disabled = randomButton.disabled = false;
@@ -191,8 +193,8 @@ function setupArcade() {
   });
   startButton.addEventListener('click', () => {
     sound.unlock();
-    if (phase === 'playing') pause();
-    else { sound.play('start'); start(); canvas.focus({ preventScroll: true }); }
+    if (phase === 'playing') pause(true);
+    else { sound.play(phase === 'paused' ? 'resume' : 'start'); start(); canvas.focus({ preventScroll: true }); }
   });
   restartButton.addEventListener('click', () => {
     if (!selected || phase === 'rolling') return;
@@ -205,7 +207,12 @@ function setupArcade() {
   dialog.addEventListener('keydown', event => {
     if (event.key === 'Escape') return;
     sound.unlock();
-    if (event.key.toLowerCase() === 'p') { event.preventDefault(); if (phase === 'playing') pause(); else if (phase === 'paused') start(); return; }
+    if (event.key.toLowerCase() === 'p') {
+      event.preventDefault();
+      if (phase === 'playing') pause(true);
+      else if (phase === 'paused') { sound.play('resume'); start(); }
+      return;
+    }
     const action = keys[event.key] || keys[event.key.toLowerCase()];
     if (!action || (event.target.tagName === 'BUTTON' && (event.key === ' ' || event.key === 'Enter'))) return;
     event.preventDefault(); keyboard.add(action);
