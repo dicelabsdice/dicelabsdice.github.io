@@ -1,5 +1,5 @@
 import { games, WIDTH, HEIGHT } from '/assets/js/not-found-games.js?v=20261115-actions1';
-import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261115-actions1';
+import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261115-volume350';
 
 const launcher = document.querySelector('.action-play');
 const dialog = document.querySelector('#arcade');

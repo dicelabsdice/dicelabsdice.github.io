@@ -18,7 +18,7 @@ const tunes = {
 // Short synthesized effects: no downloads, music loop, or audio before a gesture.
 export function createArcadeSound(host = globalThis) {
   const Context = host.AudioContext || host.webkitAudioContext;
-  let context, master, enabled = true;
+  let context, master, limiter, enabled = true;
   const voices = new Set(), lastPlayed = new Map();
   try { enabled = host.localStorage.getItem('dice-labs-arcade-sound') !== 'off'; } catch {}
 
@@ -32,7 +32,17 @@ export function createArcadeSound(host = globalThis) {
     try {
       if (!context) {
         context = new Context(); master = context.createGain();
-        master.gain.value = .5; master.connect(context.destination);
+        // 350% of the previous global level; a limiter catches only overlapping peaks.
+        master.gain.value = 1.75;
+        if (context.createDynamicsCompressor) {
+          limiter = context.createDynamicsCompressor();
+          limiter.threshold.value = -3;
+          limiter.knee.value = 6;
+          limiter.ratio.value = 12;
+          limiter.attack.value = .003;
+          limiter.release.value = .15;
+          master.connect(limiter); limiter.connect(context.destination);
+        } else master.connect(context.destination);
       }
       if (context.state === 'suspended') context.resume().catch(() => {});
     } catch { context = null; }
