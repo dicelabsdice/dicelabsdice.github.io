@@ -1,5 +1,5 @@
-import { games, WIDTH, HEIGHT } from '/assets/js/not-found-games.js?v=20261113-geometry1';
-import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261113-audio1';
+import { games, WIDTH, HEIGHT } from '/assets/js/not-found-games.js?v=20261115-actions1';
+import { createArcadeSound, createGameFeedback } from '/assets/js/not-found-sound.js?v=20261115-actions1';
 
 const launcher = document.querySelector('.action-play');
 const dialog = document.querySelector('#arcade');
@@ -133,7 +133,6 @@ function setupArcade() {
     if (!game || phase === 'rolling' || phase === 'closed' || phase === 'ended') return;
     if (action !== 'flag' && action !== 'flag-cell' && phase !== 'playing') start();
     game.press?.(action);
-    if (selected.id === 'flappy' && (action === 'action' || action === 'up') && !game.state.outcome) sound.play('flap');
     draw(); finishIfNeeded();
   }
 
@@ -234,7 +233,6 @@ function setupArcade() {
     } else {
       if (selected.id === 'invaders') pointers.set(event.pointerId, 'action');
       game.point?.(...point(event), 'down'); draw(); finishIfNeeded();
-      if (selected.id === 'flappy' && !game.state.outcome) sound.play('flap');
     }
   });
   canvas.addEventListener('pointermove', event => {

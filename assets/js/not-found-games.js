@@ -1,6 +1,8 @@
 export const WIDTH = 576;
 export const HEIGHT = 360;
 const ink = '#111214';
+// Counters keep feedback bounded even when several simulation steps share a frame.
+const cue = (state, name) => { state.sounds ??= {}; state.sounds[name] = (state.sounds[name] || 0) + 1; };
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 const pick = (items, random) => items[Math.floor(random() * items.length)];
 const rect = (ctx, x, y, w, h, color = ink) => { ctx.fillStyle = color; ctx.fillRect(x, y, w, h); };
@@ -23,7 +25,10 @@ export function createSnake(random = Math.random) {
     state,
     press(action) {
       const next = directions[action];
-      if (next && !state.queued && next.x !== -state.direction.x && next.y !== -state.direction.y) { state.next = next; state.queued = true; }
+      if (next && !state.queued && next.x !== -state.direction.x && next.y !== -state.direction.y) {
+        if (next.x !== state.direction.x || next.y !== state.direction.y) cue(state, 'turn');
+        state.next = next; state.queued = true;
+      }
     },
     step(dt) {
       if (state.outcome) return;
@@ -97,7 +102,7 @@ export function createBreakout() {
 export function createInvaders(random = Math.random) {
   const state = { score: 0, outcome: null, lives: 3, x: WIDTH / 2, enemies: [], bullets: [], shots: [], direction: 1, cooldown: 0, enemyTimer: 1.1, shield: 0 };
   for (let row = 0; row < 4; row++) for (let col = 0; col < 7; col++) state.enemies.push({ x: (WIDTH - 480) / 2 + 52 + col * 52, y: 32 + row * 32 });
-  const fire = () => { if (state.cooldown <= 0) { state.bullets.push({ x: state.x, y: 316 }); state.cooldown = 0.23; } };
+  const fire = () => { if (state.cooldown <= 0) { state.bullets.push({ x: state.x, y: 316 }); state.cooldown = 0.23; cue(state, 'shot'); } };
   return {
     state,
     press(action) {
@@ -143,8 +148,8 @@ export function createFlappy(random = Math.random) {
   const state = { score: 0, outcome: null, y: 180, vy: 0, pipes: [], timer: 0.3 };
   return {
     state,
-    press(action) { if (action === 'action' || action === 'up') state.vy = -220; },
-    point(x, y, kind) { if (kind === 'down') state.vy = -220; },
+    press(action) { if (action === 'action' || action === 'up') { state.vy = -220; cue(state, 'flap'); } },
+    point(x, y, kind) { if (kind === 'down') { state.vy = -220; cue(state, 'flap'); } },
     step(dt) {
       if (state.outcome) return;
       state.vy += 580 * dt; state.y += state.vy * dt;
